@@ -1,0 +1,65 @@
+{
+  "skill_name": "craft-and-taste",
+  "evals": [
+    {
+      "id": 1,
+      "name": "product-necessity-feature-request",
+      "prompt": "Our project management app already has issues, projects, and a roadmap. Stakeholders want us to add a built-in chat, a social feed of teammate activity, celebration confetti when tickets close, and countdown badges for every due date this week. Design the product response: what should we ship, what should we refuse, and how should the home screen stay calm and focused?",
+      "expected_output": "A necessity-first product judgment with an explicit ship/refuse/defer breakdown, a named user job, rejection of fake urgency and celebration chrome, and a one-job calm home.",
+      "files": [],
+      "expectations": [
+        "States the user’s job in one explicit sentence before proposing UI or features",
+        "Provides an explicit ship / refuse / defer breakdown for each requested item (chat, social feed, confetti, countdown badges), not a single blended paragraph",
+        "Ties refusal to saying-no / product focus (or form-without-fit), not only to engineering cost or ‘build later’"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ui-craft-review-settings",
+      "prompt": "Review this settings screen description and tell me what is wrong and how to fix it for a polished product UI: purple-to-indigo gradient page background, Inter everywhere, six nested white cards with borders and shadows, equal-weight section titles, thin ultralight labels, colored badges on every row, no empty state for 'no integrations', and a full-width primary button style on Cancel, Save, and Delete.",
+      "expected_output": "A craft critique that follows the fixed review order with a note per step and concrete replacements for hierarchy, actions, and empty state.",
+      "files": [],
+      "expectations": [
+        "Follows a fixed review order covering canvas, hierarchy, type, color/surfaces, actions, and states (empty at minimum), with a distinct finding or fix under each step—not a flat bullet dump",
+        "Prescribes hierarchy via type and space rather than more boxes/borders, and corrects action hierarchy so destructive/secondary actions are not styled like the primary Save",
+        "Requires a first-class empty state for integrations with headline, explanation, and a clear next-action CTA"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "motion-judgment-dashboard",
+      "prompt": "For a dense B2B analytics dashboard, the designer wants every chart to bounce in on scroll, the sidebar to slide with a 600ms ease-in that cannot be interrupted, hover to sparkle on every table row, and loading to be a 3-second branded intro animation before any numbers show. Advise what motion to keep, change, or delete, citing modern product motion principles.",
+      "expected_output": "Motion judgment that deletes decorative motion, requires interruptible short feedback, forbids gating content on animation, and defines a reduced-motion path so meaning is not motion-only.",
+      "files": [],
+      "expectations": [
+        "Rejects scroll-reveal bounce on every chart and sparkle hover as decorative / too frequent",
+        "Requires remaining chrome motion to be interruptible/cancelable and rejects gating data behind a long branded intro",
+        "Defines a reduced-motion (or motion-off) path where the same information and actions remain available without relying on animation as the only channel"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "edge-delight-everywhere",
+      "prompt": "Make this invoice app feel delightful and premium like Apple and Linear. Add micro-interactions everywhere: page transitions, button presses, list inserts, empty states, errors, success toasts, and idle mascot animations. Give me a full delight plan.",
+      "expected_output": "Corrects the premise that delight means motion everywhere; proposes sparse purposeful feedback, calm craft, and polish in hierarchy/states instead of ubiquitous animation.",
+      "files": [],
+      "expectations": [
+        "Challenges the premise that delight equals animating every surface",
+        "Proposes a short allowlist of purposeful feedback moments and removes or forbids idle/mascot decoration",
+        "Ties 'premium like Apple/Linear' to calm hierarchy, craft, and restraint rather than quantity of micro-interactions"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "wrong-premise-more-features",
+      "prompt": "Users said they want more options. Prove we listen by putting Export, Share, Duplicate, Archive, Assign, Watch, Pin, Remind, Convert, and Print as equally visible toolbar buttons on every issue detail page, each with its own accent color. Redesign the toolbar accordingly.",
+      "expected_output": "Corrects the wrong premise that more visible options equal better UX; applies progressive disclosure and one primary action.",
+      "files": [],
+      "expectations": [
+        "Rejects equal-visibility / equal-accent treatment of all ten actions",
+        "Applies progressive disclosure (overflow/menu/secondary placement) so the primary task stays clear",
+        "Names that saying yes to every request harms focus and product coherence"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Swift Best Practices",
+  "version": "1.0.0",
+  "organization": "Monterey Tech Lab",
+  "date": "November 2026",
+  "scope": "Swift, SwiftUI, Swift package, and macOS app codebases",
+  "abstract": "Production guide for modern Swift (Swift 6.2+ language mode, current through Swift 6.4) on iOS and macOS, designed for AI agents and LLMs. Rules across concurrency, modeling, safety, ARC, SwiftUI architecture, modularization, networking, persistence, realtime, API style, testing, tooling, macOS scenes and commands, and agent verification. Covers approachable concurrency, @Observable architecture, local Swift packages, typed networking, SwiftData and Keychain, Swift Testing, Mac WindowGroup/Settings/MenuBarExtra patterns, notarized distribution, and build-test-run verification. Each rule compares incorrect and correct Swift code. Reference primers cover TypeScript→Swift, concurrency, and macOS apps.",
+  "references": [
+    "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/",
+    "https://www.swift.org/documentation/api-design-guidelines/",
+    "https://www.swift.org/migration/documentation/migrationguide",
+    "https://developer.apple.com/swift/get-started/",
+    "https://developer.apple.com/documentation/swiftui",
+    "https://developer.apple.com/documentation/swiftui/building-a-great-mac-app-with-swiftui",
+    "https://developer.apple.com/documentation/swiftdata",
+    "https://developer.apple.com/documentation/testing",
+    "https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution",
+    "https://github.com/swiftlang/swift-evolution",
+    "https://www.skills.sh/emilkowalski/skills/write-swift"
+  ]
+}

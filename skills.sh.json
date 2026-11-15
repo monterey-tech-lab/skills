@@ -1,0 +1,16 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Apple Platforms",
+      "description": "Skills for building production Swift and SwiftUI apps for iOS and macOS.",
+      "skills": ["swift"]
+    },
+    {
+      "title": "Product Craft",
+      "description": "Skills for judging and improving product UI/UX craft, taste, and focus.",
+      "skills": ["craft-and-taste"]
+    }
+  ]
+}

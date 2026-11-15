@@ -1,0 +1,22 @@
+[
+  { "query": "Review this product UI for craft and polish — does the hierarchy and spacing feel intentional like Linear?", "should_trigger": true },
+  { "query": "This screen feels like generic AI-slop. Help me calm it down and make it tasteful.", "should_trigger": true },
+  { "query": "Should we add confetti, badges, and a social feed, or is that hurting focus?", "should_trigger": true },
+  { "query": "Advise on motion for our dashboard: what should animate and what should stay still?", "should_trigger": true },
+  { "query": "Does this empty state and loading treatment meet a high product craft bar?", "should_trigger": true },
+  { "query": "Apply Apple HIG layout and typography judgment to this settings page without rewriting it in SwiftUI APIs.", "should_trigger": true },
+  { "query": "Stakeholders want ten equal toolbar actions — push back with product taste and progressive disclosure.", "should_trigger": true },
+  { "query": "Make this invoice app feel premium like Apple and Linear without decorating every interaction.", "should_trigger": true },
+  { "query": "Critique whether this feature belongs in the product at all before we design the UI.", "should_trigger": true },
+  { "query": "Our cards, gradients, and equal-weight CTAs look template-y — redesign for calm craft.", "should_trigger": true },
+  { "query": "Fix this Swift 6 Sendable error on my actor-isolated view model.", "should_trigger": false },
+  { "query": "Implement a WWDC-style interruptible spring sheet with velocity tracking in Framer Motion for our web app.", "should_trigger": false },
+  { "query": "Produce a WCAG 2.2 AA legal compliance audit checklist with success criteria IDs for every page.", "should_trigger": false },
+  { "query": "Redesign our marketing landing page hero for a bold portfolio vibe with expressive display type.", "should_trigger": false },
+  { "query": "Implement Liquid Glass materials and SwiftUI toolbar APIs for our iOS chrome.", "should_trigger": false },
+  { "query": "Explain how URLSession certificate pinning works in our networking client.", "should_trigger": false },
+  { "query": "Generate an OpenAPI client for our payments API using Swift OpenAPI Generator.", "should_trigger": false },
+  { "query": "Debug why Prisma migrations fail when adding a unique constraint on email.", "should_trigger": false },
+  { "query": "Write unit tests with Swift Testing for our TokenStore actor reentrancy fix.", "should_trigger": false },
+  { "query": "Build a Figma design-system library of color tokens and component variants for the brand team.", "should_trigger": false }
+]
