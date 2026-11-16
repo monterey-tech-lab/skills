@@ -57,7 +57,13 @@ Product craft and taste for shipping interfaces: necessity and focus, calm hiera
 
 Applies secure-by-default architecture and implementation guardrails for multi-tenant B2B SaaS—threat modeling, authn/authz, tenant isolation, secrets, APIs, supply chain, and SOC 2 technical controls.
 
-Use when designing or reviewing SaaS security, fixing IDOR or cross-tenant leaks, hardening auth/sessions/JWT, managing secrets and PII in logs, securing webhooks and CORS, preparing enterprise security questionnaires, or adding LLM features with prompt-injection guardrails—not for Apple Keychain/notarization (use `swift`) or UI craft (use `craft-and-taste`).
+Use when designing or reviewing SaaS security, fixing IDOR or cross-tenant leaks, hardening auth/sessions/JWT, managing secrets and PII in logs, securing webhooks and CORS, preparing enterprise security questionnaires, or adding LLM features with prompt-injection guardrails—not for AI coding-assistant/MCP/agent hygiene (use `ai-security`), Apple Keychain/notarization (use `swift`), or UI craft (use `craft-and-taste`).
+
+### ai-security
+
+Hardens use of AI coding assistants, agents, MCP tools, and LLM APIs—prompt/context secret hygiene, package hallucination checks, injection-aware context, execution sandboxes and HITL, and safe LLM outputs.
+
+Use when configuring Cursor or Copilot ignore files, reviewing agent auto-run or MCP servers, verifying AI-suggested packages, preventing prompt injection in the coding loop, securing chatbot/LLM product outputs, or setting spend caps and kill switches—not for multi-tenant SaaS AppSec (use `security`), Apple Keychain/notarization (use `swift`), or UI craft (use `craft-and-taste`).
 
 ## Installation
 

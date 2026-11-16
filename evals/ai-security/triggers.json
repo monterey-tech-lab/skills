@@ -1,0 +1,22 @@
+[
+  { "query": "The agent wants me to paste our .env into chat to debug Stripe — what should I do instead?", "should_trigger": true },
+  { "query": "Set up .cursorignore so secrets and customer dumps are not indexed by the coding assistant.", "should_trigger": true },
+  { "query": "The model suggested npm install some package I've never heard of — how do I avoid slopsquatting?", "should_trigger": true },
+  { "query": "Should we auto-approve MCP tools and terminal commands for our coding agent?", "should_trigger": true },
+  { "query": "Audit this third-party MCP server before we connect it to Cursor with cloud credentials.", "should_trigger": true },
+  { "query": "Our chatbot renders LLM HTML with innerHTML — how do we prevent XSS from model output?", "should_trigger": true },
+  { "query": "Can we ask the LLM if a user is allowed to refund, or do we need real IAM checks?", "should_trigger": true },
+  { "query": "Indirect prompt injection from GitHub issues is steering the agent — how do we contain it?", "should_trigger": true },
+  { "query": "Configure spend caps and a kill switch for our autonomous coding agent loops.", "should_trigger": true },
+  { "query": "Does Claude Code zero data retention cover MCP and local transcripts?", "should_trigger": true },
+  { "query": "Enforce PostgreSQL RLS so tenant A cannot read tenant B invoices in our SaaS API.", "should_trigger": false },
+  { "query": "Fix this Swift 6 Sendable error on my actor-isolated view model.", "should_trigger": false },
+  { "query": "Review this settings screen for craft and polish like Linear — calm hierarchy, no AI-slop cards.", "should_trigger": false },
+  { "query": "Design short-lived JWTs and HttpOnly cookies for our Node billing product auth.", "should_trigger": false },
+  { "query": "Store the refresh token in the iOS Keychain and notarize our Mac app.", "should_trigger": false },
+  { "query": "Prepare SOC 2 technical evidence: append-only audit logs and backup restore drills for the SaaS.", "should_trigger": false },
+  { "query": "Debug why Prisma migrations fail when adding a unique constraint on email.", "should_trigger": false },
+  { "query": "Produce a GDPR legal opinion on whether our DPA meets Article 28.", "should_trigger": false },
+  { "query": "Configure Splunk SIEM correlation rules for the SOC night shift.", "should_trigger": false },
+  { "query": "Implement Stripe webhook signature verification and idempotency for our payments API.", "should_trigger": false }
+]

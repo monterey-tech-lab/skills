@@ -1,0 +1,22 @@
+{
+  "title": "AI Security",
+  "version": "0.1.0",
+  "organization": "Monterey Tech Lab",
+  "date": "November 2026",
+  "scope": "AI coding assistants, MCP tools, autonomous agents, and LLM product features",
+  "abstract": "Secure-by-default guardrails for using AI coding assistants and shipping LLM features: keep secrets and PII out of prompts and indexes, verify AI-suggested packages against registries (anti-slopsquatting), treat issues/web/MCP as untrusted context, require human-in-the-loop and sandboxed least-privilege agents, and sanitize LLM outputs while never using models for authorization. Grounded in OWASP LLM Top 10 2026, Agentic ASI 2026, MCP security best practices, NIST SP 800-218A, and vendor ignore/ZDR docs. Complements the SaaS security skill; defensive only.",
+  "references": [
+    "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/",
+    "https://genai.owasp.org/llm-top-10/",
+    "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+    "https://cheatsheetseries.owasp.org/cheatsheets/Secure_Coding_with_AI_Cheat_Sheet.html",
+    "https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html",
+    "https://cheatsheetseries.owasp.org/cheatsheets/MCP_Security_Cheat_Sheet.html",
+    "https://modelcontextprotocol.io/docs/2025-11-25/tutorials/security/security_best_practices",
+    "https://cursor.com/docs/reference/ignore-file",
+    "https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/content-exclusion",
+    "https://code.claude.com/docs/en/zero-data-retention",
+    "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf",
+    "https://socket.dev/glossary/slopsquatting"
+  ]
+}

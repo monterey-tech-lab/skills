@@ -16,6 +16,11 @@
       "title": "Secure SaaS",
       "description": "Skills for secure-by-default multi-tenant SaaS architecture, auth, and operations.",
       "skills": ["security"]
+    },
+    {
+      "title": "AI Agents",
+      "description": "Skills for safe use of AI coding assistants, MCP tools, agents, and LLM APIs.",
+      "skills": ["ai-security"]
     }
   ]
 }

@@ -1,6 +1,6 @@
 ---
 name: security
-description: Applies secure-by-default architecture and implementation guardrails for multi-tenant B2B SaaS—threat modeling, authn/authz, tenant isolation, secrets, APIs, supply chain, and SOC 2 technical controls. Use when designing or reviewing SaaS security, fixing IDOR or cross-tenant leaks, hardening auth/sessions/JWT, managing secrets and PII in logs, securing webhooks and CORS, preparing enterprise security questionnaires, or adding LLM features with prompt-injection guardrails—not for Apple Keychain/notarization (use swift) or UI craft (use craft-and-taste).
+description: Applies secure-by-default architecture and implementation guardrails for multi-tenant B2B SaaS—threat modeling, authn/authz, tenant isolation, secrets, APIs, supply chain, and SOC 2 technical controls. Use when designing or reviewing SaaS security, fixing IDOR or cross-tenant leaks, hardening auth/sessions/JWT, managing secrets and PII in logs, securing webhooks and CORS, preparing enterprise security questionnaires, or adding LLM features with prompt-injection guardrails—not for AI coding-assistant/MCP/agent hygiene (use ai-security), Apple Keychain/notarization (use swift), or UI craft (use craft-and-taste).
 license: MIT
 metadata:
   author: monterey-tech-lab
@@ -13,7 +13,7 @@ Production guardrails for agents building or reviewing scalable multi-tenant B2B
 
 ## Out of Scope
 
-Offensive security / exploit writing; novel cryptography; GDPR/HIPAA/PCI legal opinions; Apple Keychain/notarization (`swift`); pure SIEM/SOC tooling unrelated to the product codebase; UI craft (`craft-and-taste`).
+Offensive security / exploit writing; novel cryptography; GDPR/HIPAA/PCI legal opinions; Apple Keychain/notarization (`swift`); pure SIEM/SOC tooling unrelated to the product codebase; UI craft (`craft-and-taste`); AI coding-assistant ignore files, MCP auto-run, and package-hallucination hygiene (`ai-security`).
 
 ## Five Pillars
 
