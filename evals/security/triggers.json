@@ -1,0 +1,22 @@
+[
+  { "query": "Review our multi-tenant SaaS API for IDOR and tenant isolation gaps before we onboard enterprise customers.", "should_trigger": true },
+  { "query": "How should we store passwords and set cookie flags for sessions in our Node billing app?", "should_trigger": true },
+  { "query": "We keep leaking API keys into git — set up secrets management and pre-commit secret scanning.", "should_trigger": true },
+  { "query": "Threat model this new admin impersonation feature with STRIDE before we ship it.", "should_trigger": true },
+  { "query": "Add rate limiting, idempotency keys, and Stripe webhook signature verification to our payments API.", "should_trigger": true },
+  { "query": "Enable PostgreSQL row-level security so one customer never sees another's invoices.", "should_trigger": true },
+  { "query": "Our JWT access tokens last 30 days in localStorage — redesign auth for revocation and short-lived tokens.", "should_trigger": true },
+  { "query": "Prepare technical controls for SOC 2 questionnaires: audit logs, backups, and an incident runbook.", "should_trigger": true },
+  { "query": "Redact PII from Datadog logs and stop returning stack traces to API clients.", "should_trigger": true },
+  { "query": "We're adding an LLM assistant to the product — guard against prompt injection and tool over-privilege.", "should_trigger": true },
+  { "query": "Fix this Swift 6 Sendable error on my actor-isolated view model.", "should_trigger": false },
+  { "query": "Review this settings screen for craft and polish — calm hierarchy like Linear, no AI-slop cards.", "should_trigger": false },
+  { "query": "Store the refresh token in the iOS Keychain and notarize our Mac app for direct download.", "should_trigger": false },
+  { "query": "Write a Semgrep rule pack YAML that flags our internal CWE catalogue for the AppSec team.", "should_trigger": false },
+  { "query": "Design the marketing landing page hero typography and gradient for a bold portfolio vibe.", "should_trigger": false },
+  { "query": "Debug why Prisma migrations fail when adding a unique constraint on email in staging.", "should_trigger": false },
+  { "query": "Explain how URLSession certificate pinning should be implemented in our Swift networking client.", "should_trigger": false },
+  { "query": "Produce a GDPR legal opinion letter on whether our DPA meets Article 28 for EU customers.", "should_trigger": false },
+  { "query": "Configure Splunk SIEM correlation rules and IDS signatures for our SOC night shift.", "should_trigger": false },
+  { "query": "Implement a WWDC-style interruptible spring sheet with velocity tracking in Framer Motion.", "should_trigger": false }
+]

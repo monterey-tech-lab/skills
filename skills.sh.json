@@ -11,6 +11,11 @@
       "title": "Product Craft",
       "description": "Skills for judging and improving product UI/UX craft, taste, and focus.",
       "skills": ["craft-and-taste"]
+    },
+    {
+      "title": "Secure SaaS",
+      "description": "Skills for secure-by-default multi-tenant SaaS architecture, auth, and operations.",
+      "skills": ["security"]
     }
   ]
 }

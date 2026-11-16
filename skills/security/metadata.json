@@ -1,0 +1,22 @@
+{
+  "title": "SaaS Security",
+  "version": "0.1.0",
+  "organization": "Monterey Tech Lab",
+  "date": "November 2026",
+  "scope": "Multi-tenant B2B/SaaS product codebases (TypeScript/Node, PostgreSQL, cloud)",
+  "abstract": "Secure-by-default architecture and implementation guardrails for agents shipping scalable SaaS: Confidentiality, Integrity, Availability, Authentication, and Non-Repudiation, plus first-class authorization. Covers STRIDE threat modeling, IDOR/BOLA prevention, PostgreSQL RLS tenant isolation, Argon2id and session/JWT hygiene, SSO readiness, secrets and PII logging, API abuse controls, LLM prompt-injection boundaries, SCA, environment isolation, audit logs, backups, incident runbooks, and technical mapping to OWASP ASVS 5.0 and SOC 2 Trust Services Criteria. Each rule compares incorrect and correct TypeScript/SQL patterns. Defensive only; not legal advice.",
+  "references": [
+    "https://owasp.org/projects/top-ten",
+    "https://asvs.owasp.org/",
+    "https://owasp.org/projects/api-security-project",
+    "https://cheatsheetseries.owasp.org/",
+    "https://genai.owasp.org/llm-top-10/",
+    "https://csrc.nist.gov/pubs/sp/800/218/final",
+    "https://pages.nist.gov/800-63-4/sp800-63b.html",
+    "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats",
+    "https://www.rfc-editor.org/rfc/rfc8725.html",
+    "https://www.postgresql.org/docs/current/ddl-rowsecurity.html",
+    "https://slsa.dev/spec/",
+    "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2/"
+  ]
+}

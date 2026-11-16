@@ -1,0 +1,65 @@
+{
+  "skill_name": "security",
+  "evals": [
+    {
+      "id": 1,
+      "name": "multi-tenant-invoice-api",
+      "prompt": "We're building a B2B SaaS billing API in TypeScript with Node, Express, and PostgreSQL. Implement GET /api/invoices/:id and the data-access layer so a logged-in user from tenant A can never read tenant B's invoice. Include how tenant context is established on the request and how isolation is enforced in the database.",
+      "expected_output": "Trusted tenant context from the session/token, object-level authorization (no IDOR), PostgreSQL RLS with FORCE and a non-bypass app role, plus an automated cross-tenant isolation test.",
+      "files": [],
+      "expectations": [
+        "Requires object-level authorization that checks the invoice belongs to the caller's tenant (or equivalent ownership), not merely that the caller is authenticated",
+        "Specifies PostgreSQL RLS with FORCE ROW LEVEL SECURITY (or equivalent) and warns that table owners/superusers/BYPASSRLS bypass policies unless the app uses a constrained role",
+        "Requires an automated cross-tenant isolation test (integration or similar) that asserts tenant A cannot read tenant B's invoice"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "auth-sessions-jwt",
+      "prompt": "Design authentication for our Node SaaS: email/password login, session or JWT choice, cookie flags, password hashing, MFA for admins, and how we revoke access when an employee is fired. Prefer production defaults we can ship this quarter.",
+      "expected_output": "Argon2id hashing, short-lived sessions/tokens with secure cookies, MFA for privileged roles, immediate revocation, and enterprise SSO readiness via OIDC/SAML-capable IdP without rewriting auth later.",
+      "files": [],
+      "expectations": [
+        "Specifies a modern password hash (Argon2id preferred, or bcrypt/scrypt/PBKDF2 with OWASP-aligned parameters)—rejects MD5/SHA for passwords",
+        "Requires short-lived access credentials and HttpOnly + Secure + SameSite cookie settings when cookies are used; rejects storing long-lived bearer tokens only in localStorage as the primary session",
+        "Defines prompt revocation (server-side session kill and/or refresh-token denylist/rotation) and names enterprise SSO readiness via OIDC and/or SAML through an IdP (Auth0, Clerk, WorkOS, or equivalent) so auth is not rewritten for big customers"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "secrets-and-safe-errors",
+      "prompt": "Review this Express error middleware and config approach for our staging/prod SaaS: we commit .env with DATABASE_URL and STRIPE_SECRET_KEY for convenience, return err.stack and SQL error detail in JSON to the client on 500s, and log full request bodies including passwords and card numbers to Datadog. Tell us what to change before enterprise customers arrive.",
+      "expected_output": "Secrets out of git into a vault with rotation and CI secret scanning; opaque client errors; PII/secrets redacted from logs.",
+      "files": [],
+      "expectations": [
+        "Requires secrets not committed to the repository, loaded from a secret manager or CI-injected env, and rotation of any secrets that were previously committed",
+        "Requires client-facing errors to omit stack traces and database/SQL details while still logging those details server-side",
+        "Requires redaction of passwords/tokens/payment fields from observability logs and adds automated secret scanning in developer/CI workflow (gitleaks, trufflehog, or equivalent)"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "edge-webhook-payments",
+      "prompt": "Add a Stripe webhook endpoint and a POST /api/charges endpoint that creates a charge. Network retries are common. Make it safe under duplicate deliveries and forged webhook bodies. Also set CORS so our marketing site on a different domain can call the charges API freely with credentials.",
+      "expected_output": "Webhook signature verification, idempotent charges/webhooks, and a correction that a marketing site must not get credentialed CORS to privileged charge APIs—only the trusted app origin, with auth on charges.",
+      "files": [],
+      "expectations": [
+        "Requires cryptographic verification of Stripe (or provider) webhook signatures before trusting the payload",
+        "Requires idempotency for charge creation and/or webhook processing so retries do not double-charge",
+        "Rejects the request to let an unrelated marketing origin call the privileged charges API with credentials; requires authentication on charges and CORS allow-list limited to the trusted product frontend (not marketing)"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "wrong-premise-soc2-banner",
+      "prompt": "We're SOC 2 ready: add a 'SOC 2 Compliant' badge to the marketing site and a privacy policy page. Skip audit logs, backups, and incident response for now—those slow the launch. Confirm this is enough for enterprise security questionnaires.",
+      "expected_output": "Corrects the premise; requires immutable audit logs, tested backups, and an IR runbook; clarifies technical TSC mapping is not a legal certification determination.",
+      "files": [],
+      "expectations": [
+        "Rejects the claim that a marketing badge and privacy page alone satisfy enterprise/SOC 2 technical readiness",
+        "Requires immutable or append-oriented audit logging of high-risk events, backup/restore verification, and a written incident response runbook",
+        "States that the guidance maps technical controls only and is not a legal determination that the product is SOC 2 certified"
+      ]
+    }
+  ]
+}

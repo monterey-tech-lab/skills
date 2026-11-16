@@ -52,6 +52,13 @@ Product craft and taste for shipping interfaces: necessity and focus, calm hiera
 - Judging motion and micro-interactions (what to keep, change, or delete)
 - Aiming for Apple-like or Linear-like product quality without spring-demo theater
 
+
+### security
+
+Applies secure-by-default architecture and implementation guardrails for multi-tenant B2B SaaS—threat modeling, authn/authz, tenant isolation, secrets, APIs, supply chain, and SOC 2 technical controls.
+
+Use when designing or reviewing SaaS security, fixing IDOR or cross-tenant leaks, hardening auth/sessions/JWT, managing secrets and PII in logs, securing webhooks and CORS, preparing enterprise security questionnaires, or adding LLM features with prompt-injection guardrails—not for Apple Keychain/notarization (use `swift`) or UI craft (use `craft-and-taste`).
+
 ## Installation
 
 Requires Node.js 22.20 or later for the `skills` CLI. Run from your project:
