@@ -1,0 +1,65 @@
+{
+  "skill_name": "mcp",
+  "evals": [
+    {
+      "id": 1,
+      "name": "multi-host-client-setup",
+      "prompt": "Our monorepo needs Linear issues and Vercel deployments available to the coding agent. Set up MCP correctly for teammates using Cursor and Claude Code in the same project. Give exact config paths, commands, and JSON snippets for each host, then tell us how to verify the servers are connected.",
+      "expected_output": "Host-correct Cursor (.cursor/mcp.json) and Claude Code (claude mcp add / .mcp.json scopes) recipes using official Linear and Vercel Streamable HTTP endpoints, plus a smoke-test (list tools + one call) per host.",
+      "files": [],
+      "expectations": [
+        "Specifies Cursor project config at .cursor/mcp.json (or documents global ~/.cursor/mcp.json as the alternative) with url-based remote entries for Linear and Vercel official endpoints",
+        "Specifies Claude Code setup via claude mcp add --transport http (or project .mcp.json) using https://mcp.linear.app/mcp and https://mcp.vercel.com — not invented paths like ~/.claude/mcp.json",
+        "Requires a smoke-test: list tools (or /mcp / claude mcp list) and at least one real tool call after connect"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "build-vs-reuse-server",
+      "prompt": "We need our internal docs searchable from ChatGPT deep research and from Cursor. Should we build our own MCP server or reuse something? If we build, pick transport and SDK guidance for a TypeScript service on Vercel that also works as a remote MCP for OpenAI. Outline the publish checklist.",
+      "expected_output": "Reuse-first decision for commodity tools; when building, prefer Streamable HTTP remote, official TS SDK / mcp-handler patterns, OpenAI search+fetch expectations noted, publish/smoke checklist without sessionful initialize.",
+      "files": [],
+      "expectations": [
+        "Prefers reusing a first-party or existing remote MCP when it covers the need, and only then justifies building",
+        "Defaults new remote servers to Streamable HTTP (not sessionful initialize + Mcp-Session-Id, not HTTP+SSE as the primary new-server choice)",
+        "When targeting ChatGPT/Deep Research, requires search and fetch tools and/or Responses API tools entry with type mcp and server_url"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "wrong-premise-sessionful-http",
+      "prompt": "Write a production MCP server for our Node API. Use the initialize handshake, store Mcp-Session-Id in Redis, and expose tools over classic HTTP+SSE like every 2025 tutorial. Also put the config in ~/.claude/mcp.json for Claude Code and auto-approve all tools.",
+      "expected_output": "Corrects obsolete sessionful/SSE defaults against 2026-07-28, fixes the Claude Code config path, and defers auto-approve/allow-list to ai-security rather than endorsing auto-approve *.",
+      "files": [],
+      "expectations": [
+        "Rejects initialize + Mcp-Session-Id / Redis session stores as the 2026-07-28 default and states the protocol is sessionless / stateless for Streamable HTTP",
+        "Rejects ~/.claude/mcp.json (or equivalent wrong path) and gives the correct Claude Code locations or claude mcp add command",
+        "Does not endorse auto-approve all tools; points to allow-list / HITL (ai-security or equivalent) instead of enabling autoApprove *"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "edge-agent-skills-and-stateless",
+      "prompt": "We are shipping an MCP server that also publishes Agent Skills, and we heard Google/Cloudflare talk about MCP becoming stateless. Explain how Agent Skills relate to MCP for 2026-07-28, what server/discover and resultType mean for us, and how that changes our remote HTTP design versus older sessionful servers.",
+      "expected_output": "Accurate 2026-07-28 facts: Skills extension vs host Agent Skills for building servers; server/discover required; resultType complete|input_required; no protocol sessions; Streamable HTTP headers expectations at a high level.",
+      "files": [],
+      "expectations": [
+        "Distinguishes using Agent Skills to guide MCP server development from the MCP Skills extension (servers publishing skills via skill:// / skills/list) — or clearly covers both without conflating them as one feature",
+        "States servers must support server/discover (or equivalent discovery RPC) and that results use resultType (complete / input_required) under 2026-07-28",
+        "States remote design should not rely on protocol-level sessions / Mcp-Session-Id sticky affinity for the 2026-07-28 core"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "product-command-assignment",
+      "prompt": "Assign the exact commands and config for connecting the official Linear MCP (read-write) on: (1) Claude Code CLI, (2) Cursor project MCP JSON, (3) a stdio-only client that needs mcp-remote. Do not invent URLs.",
+      "expected_output": "Three host-correct recipes using https://mcp.linear.app/mcp with claude mcp add --transport http, Cursor url entry, and npx mcp-remote for stdio-only clients.",
+      "files": [],
+      "expectations": [
+        "Gives claude mcp add --transport http … https://mcp.linear.app/mcp (read-write endpoint, not only the deprecated /sse URL as the recommended default)",
+        "Gives a Cursor mcp.json url entry pointing at https://mcp.linear.app/mcp",
+        "For stdio-only clients, uses mcp-remote (or documents host-native remote) against the Linear MCP URL rather than inventing a different Linear endpoint"
+      ]
+    }
+  ]
+}

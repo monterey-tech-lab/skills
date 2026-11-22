@@ -1,0 +1,22 @@
+[
+  { "query": "Set up Linear and Vercel MCP for our Cursor project so the agent can file issues and check deployments.", "should_trigger": true },
+  { "query": "How do I add a remote MCP server in Claude Code with the correct config scope and verify it with /mcp?", "should_trigger": true },
+  { "query": "Build an MCP server for our internal docs API targeting Streamable HTTP and the 2026-07-28 protocol.", "should_trigger": true },
+  { "query": "Wire ChatGPT deep research to our company knowledge MCP — what tools and transport should we expose?", "should_trigger": true },
+  { "query": "Our MCP client still uses initialize and Mcp-Session-Id — migrate it to the current MCP revision.", "should_trigger": true },
+  { "query": "What goes in .cursor/mcp.json versus Claude Code .mcp.json for the same remote server?", "should_trigger": true },
+  { "query": "Should we reuse mcp.linear.app or write our own Linear integration MCP?", "should_trigger": true },
+  { "query": "Publish an MCP server on Vercel with mcp-handler and smoke-test tools/list from Cursor.", "should_trigger": true },
+  { "query": "Explain how Agent Skills relate to MCP when we want our server to publish skills and hosts to discover tools.", "should_trigger": true },
+  { "query": "Assign host-specific MCP add commands for Linear across Claude Code, Cursor, and a stdio-only client.", "should_trigger": true },
+  { "query": "Allow-list this community MCP server, refuse auto-approve *, and require HITL before it can touch production AWS keys.", "should_trigger": false },
+  { "query": "Audit prompt injection risk when the agent reads untrusted GitHub issues and MCP tool output.", "should_trigger": false },
+  { "query": "Fix this multi-tenant IDOR on our SaaS invoices API and harden JWT session cookies.", "should_trigger": false },
+  { "query": "Resolve this Swift 6 Sendable error on an actor-isolated view model in our iOS app.", "should_trigger": false },
+  { "query": "Review this settings UI for craft — nested cards, equal-weight CTAs, and purple gradient chrome.", "should_trigger": false },
+  { "query": "Increase the LLM context window and summarize a long transcript without connecting any tools.", "should_trigger": false },
+  { "query": "Configure .cursorignore so Agent chat does not index .env files (ignore-file hygiene only).", "should_trigger": false },
+  { "query": "Write Prisma migrations and a tRPC procedure for billing webhooks — no agent tooling.", "should_trigger": false },
+  { "query": "Generate an OpenAPI client for our payments API; we are not integrating Model Context Protocol.", "should_trigger": false },
+  { "query": "Explain transformer attention and KV-cache memory for model serving capacity planning.", "should_trigger": false }
+]

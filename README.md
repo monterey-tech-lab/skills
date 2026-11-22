@@ -65,6 +65,22 @@ Hardens use of AI coding assistants, agents, MCP tools, and LLM APIs—prompt/co
 
 Use when configuring Cursor or Copilot ignore files, reviewing agent auto-run or MCP servers, verifying AI-suggested packages, preventing prompt injection in the coding loop, securing chatbot/LLM product outputs, or setting spend caps and kill switches—not for multi-tenant SaaS AppSec (use `security`), Apple Keychain/notarization (use `swift`), or UI craft (use `craft-and-taste`).
 
+### mcp
+
+Configures and verifies Model Context Protocol clients and servers across hosts (Cursor, Claude Code, ChatGPT/OpenAI, VS Code/Copilot, Vercel, Linear) against the 2026-07-28 specification—host-correct paths/commands, reuse-vs-build, industry patterns, Streamable HTTP/stdio, and smoke-tests.
+
+**Use when:**
+
+- Setting up or fixing MCP config for Cursor, Claude Code, ChatGPT/OpenAI, VS Code/Copilot, Vercel, or Linear
+- Choosing reuse of a first-party / Registry MCP versus building a server
+- Applying patterns (annotations, CIMD, MCP Apps/MCPB, caching scopes)
+- Picking Streamable HTTP or stdio (and when to bridge with `mcp-remote`)
+- Migrating off sessionful `initialize` / `Mcp-Session-Id` tutorials
+- Distinguishing Agent Skills for authoring servers from the MCP Skills extension
+- Smoke-testing tools after connect (Inspector + host list/call)
+
+Not for MCP allow-list / auto-approve / HITL policy (use `ai-security`).
+
 ## Installation
 
 Requires Node.js 22.20 or later for the `skills` CLI. Run from your project:

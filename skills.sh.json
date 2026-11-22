@@ -20,7 +20,7 @@
     {
       "title": "AI Agents",
       "description": "Skills for safe use of AI coding assistants, MCP tools, agents, and LLM APIs.",
-      "skills": ["ai-security"]
+      "skills": ["ai-security", "mcp"]
     }
   ]
 }
