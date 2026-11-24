@@ -1,0 +1,22 @@
+[
+  { "query": "Research our SaaS product gaps from the marketing site and public reviews, then give a prioritized backlog of improvements and AI ideas.", "should_trigger": true },
+  { "query": "Tear down our competitors' feature sets and pricing versus ours — what are we missing that customers complain about online?", "should_trigger": true },
+  { "query": "Our studio needs a client workshop deck: map Calendly-like product strengths, VOC themes, and ranked opportunities we could build next.", "should_trigger": true },
+  { "query": "Find what Reddit and Google reviews say about this product and turn complaints into a scored opportunity list.", "should_trigger": true },
+  { "query": "Verify who actually competes with us and build a feature comparison matrix before we decide what to ship.", "should_trigger": true },
+  { "query": "Help me enhance this product: missing features, process automation, bugs customers mention, and where AI would help for real.", "should_trigger": true },
+  { "query": "As product owner, run an exploratory research pass on our website and the market — gaps, growth levers, then optionally implement the top items in our repo.", "should_trigger": true },
+  { "query": "What are peers offering that we are not? Use public sources and customer opinions, not vibes.", "should_trigger": true },
+  { "query": "Agency engagement: research this client's software offering, competitors, and review sentiment; deliver a ranked enhancement backlog.", "should_trigger": true },
+  { "query": "Sparse reviews for our indie app — still research category competitors and propose a low-confidence improvement backlog.", "should_trigger": true },
+  { "query": "Review this settings UI for craft — nested cards, equal-weight CTAs, and purple gradient chrome.", "should_trigger": false },
+  { "query": "Fix this multi-tenant IDOR on our SaaS invoices API and harden JWT session cookies.", "should_trigger": false },
+  { "query": "Allow-list this community MCP server, refuse auto-approve *, and require HITL before production AWS access.", "should_trigger": false },
+  { "query": "Resolve this Swift 6 Sendable error on an actor-isolated view model in our iOS app.", "should_trigger": false },
+  { "query": "Set up Linear and Vercel MCP for our Cursor project so the agent can file issues and check deployments.", "should_trigger": false },
+  { "query": "Configure .cursorignore so Agent chat does not index .env files (ignore-file hygiene only).", "should_trigger": false },
+  { "query": "Audit prompt injection risk when the agent reads untrusted GitHub issues and MCP tool output.", "should_trigger": false },
+  { "query": "Write Prisma migrations and a tRPC procedure for billing webhooks — no product market research.", "should_trigger": false },
+  { "query": "Explain transformer attention and KV-cache memory for model serving capacity planning.", "should_trigger": false },
+  { "query": "Add spring physics and interruptible gestures to this web animation demo like Designing Fluid Interfaces.", "should_trigger": false }
+]

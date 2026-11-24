@@ -81,6 +81,20 @@ Configures and verifies Model Context Protocol clients and servers across hosts 
 
 Not for MCP allow-list / auto-approve / HITL policy (use `ai-security`).
 
+### enhance-product
+
+Researches a website, business, or software product—mapping features, verifying competitors, mining public customer and market opinion—then produces a scored gap backlog (missing features, automation, bugs, growth, AI enhancements) and optionally implements selected items.
+
+**Use when:**
+
+- Enhancing a product from a URL or brand (features, gaps, automation, growth, AI ideas)
+- Running a competitor teardown or feature/pricing comparison matrix
+- Gathering Reddit/Google/review/social VOC into a scored opportunity list
+- Helping a studio or agency propose ranked client improvements
+- Turning research gaps into implementation after a ranked backlog exists
+
+Not for UI craft-only polish (use `craft-and-taste`), AppSec audits (use `security`), or MCP/agent setup (use `mcp` / `ai-security`).
+
 ## Installation
 
 Requires Node.js 22.20 or later for the `skills` CLI. Run from your project:

@@ -13,6 +13,11 @@
       "skills": ["craft-and-taste"]
     },
     {
+      "title": "Product Strategy",
+      "description": "Skills for researching products, competitors, and customer signal into scored enhancement backlogs.",
+      "skills": ["enhance-product"]
+    },
+    {
       "title": "Secure SaaS",
       "description": "Skills for secure-by-default multi-tenant SaaS architecture, auth, and operations.",
       "skills": ["security"]
